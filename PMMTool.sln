@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMMTool.Data", "PMMTool.Data\PMMTool.Data.csproj", "{73310D7B-F797-4E95-B6FF-F188C350E776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMMTool.WebAPI", "PMMTool.WebAPI\PMMTool.WebAPI.csproj", "{0FEB048C-0F17-48A8-BD86-A33DE057D4F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73310D7B-F797-4E95-B6FF-F188C350E776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73310D7B-F797-4E95-B6FF-F188C350E776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73310D7B-F797-4E95-B6FF-F188C350E776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73310D7B-F797-4E95-B6FF-F188C350E776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FEB048C-0F17-48A8-BD86-A33DE057D4F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FEB048C-0F17-48A8-BD86-A33DE057D4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FEB048C-0F17-48A8-BD86-A33DE057D4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FEB048C-0F17-48A8-BD86-A33DE057D4F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A4C08B3-F94C-4C14-BE10-AA64C9778FE8}
+	EndGlobalSection
+EndGlobal
