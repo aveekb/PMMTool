@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using PMMTool.Data;
+using PMMTool.WebAPI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,21 +11,23 @@ namespace PMMTool.WebAPI.Controllers
 {
     public class ProjectController : Controller
     {
+        IProjectRepository _projectRepo = new ProjectRepository();
         // GET: Project
-        public ActionResult Index()
+        public IList<M_Project> Index()
         {
-            return View();
+            return _projectRepo.GetAll();
         }
 
         // GET: Project/Details/5
-        public ActionResult Details(int id)
+        public M_Project Details(int id)
         {
-            return View();
+            return _projectRepo.GetAll().Where(x=>x.Project_Id == id).FirstOrDefault();
         }
 
         // GET: Project/Create
         public ActionResult Create()
         {
+           
             return View();
         }
 
@@ -32,8 +37,9 @@ namespace PMMTool.WebAPI.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
-
+                var obj = JsonConvert.DeserializeObject<M_Project>(collection.ToString());
+              
+                _projectRepo.Add(obj);
                 return RedirectToAction("Index");
             }
             catch
@@ -54,8 +60,9 @@ namespace PMMTool.WebAPI.Controllers
         {
             try
             {
-                // TODO: Add update logic here
-
+                
+                var obj = JsonConvert.DeserializeObject<M_Project>(collection.ToString());               
+                _projectRepo.Update(obj);
                 return RedirectToAction("Index");
             }
             catch
@@ -77,7 +84,8 @@ namespace PMMTool.WebAPI.Controllers
             try
             {
                 // TODO: Add delete logic here
-
+                var obj = _projectRepo.GetAll().Where(x => x.Project_Id == id).FirstOrDefault();
+                _projectRepo.Remove(obj);
                 return RedirectToAction("Index");
             }
             catch
